@@ -815,7 +815,7 @@ public class Manager_Query {
             String sql = "SELECT Check.check_number, Employee.empl_surname, Customer_Card.cust_surname, Check.card_number, Check.print_date, Check.sum_total, Check.vat " +
                     "FROM Check " +
                     "INNER JOIN Employee ON Check.id_employee = Employee.id_employee " +
-                    "LEFT JOIN Customer_Card ON Check.card_number = Customer_Card.card_number " +
+                    "INNER JOIN Customer_Card ON Check.card_number = Customer_Card.card_number " +
                     "INNER JOIN Sale ON Check.check_number = Sale.check_number " +
                     "INNER JOIN Store_Product ON Sale.UPC = Store_Product.UPC " +
                     "INNER JOIN Product ON Store_Product.id_product = Product.id_product " +
